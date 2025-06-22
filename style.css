@@ -453,6 +453,7 @@ nav .fa-solid{
     }
 }
 #msg{
+    font-size: 15px;
     color: #61b752;
     margin-top: -10px;
     font-style: italic;
