@@ -241,7 +241,7 @@ nav ul li a:hover::after{
     transition: height 0.5s;
 }
 .layer h3{
-    width: 500;
+    font-weight: 500;
     margin-bottom: 20px;
 }
 .layer a{
@@ -270,6 +270,7 @@ nav ul li a:hover::after{
 
 .btn {
     margin-top: 30px;
+    text-align: center;
 
     display: block;
     padding: 10px 25px;
