@@ -3,220 +3,302 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SATYA</title>
+    <title>Satyam Gagre - Web Developer | Full Stack Developer from Pune</title>
+    <meta name="description" content="Passionate web developer from Pune specializing in Django, Flutter, and full-stack development. Creating modern web applications and mobile apps.">
+    <meta name="keywords" content="web developer, django, flutter, pune, full-stack developer, python, mobile app developer">
+    <meta property="og:title" content="Satyam Gagre - Web Developer">
+    <meta property="og:description" content="Passionate web developer creating modern web applications">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/882b9bbf2b.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- Header Section -->
     <div id="header">
-    <div class="container">
-        <nav>
-            <img src="images/logo.png" class="logo">
-            <ul id="sidemenu">
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo" alt="Satyam Gagre Logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-ellipsis-vertical" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hi, I'm <span class="typing-text">Satyam Gagre</span> <br> From Pune, Maharashtra</h1>
+                <p class="subtitle">Building digital experiences that matter</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png" alt="Satyam Gagre" loading="lazy">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am a passionate and curious learner with a strong interest in technology and software development. I enjoy building web and Python-based projects that solve real-world problems. Always eager to learn new skills, I strive to improve every day. My goal is to become a skilled developer and make a meaningful impact through my work.</p>
+                    
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    
+                    <div class="tab-contents active-tabs" id="skills">
+                        <ul>
+                            <li><span>Web Development</span><br>Django-based websites and web apps with authentication and database integration</li>
+                            <li><span>App Development</span><br>Flutter apps with Firebase backend and real-time features</li>
+                            <li><span>UI/UX Design</span><br>Responsive web and app designs with modern user interfaces</li>
+                            <li><span>Database Management</span><br>SQL and NoSQL databases, data modeling and optimization</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2024</span><br>Web Development Intern at Tech Master – working on Django projects with authentication and database integration</li>
+                            <li><span>2024 - Present</span><br>Developing full-stack applications using Django and building REST APIs for various clients</li>
+                            <li><span>2024 - Present</span><br>Learning Flutter and creating mobile apps with Firebase backend integration</li>
+                            <li><span>2023 - Present</span><br>Freelance web development projects for local businesses and startups</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020</span><br>10th (SSC) from Modern High School, Shivaji Nagar, Pune</li>
+                            <li><span>2022</span><br>12th (HSC) from Modern College of Arts, Commerce and Science, Shivaji Nagar, Pune</li>
+                            <li><span>2022 - Present</span><br>Computer Engineering at Ajeenkya DY Patil University, Lohegaon, Pune</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div class="services" id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div class="service">
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>Creating responsive, modern websites using Django, HTML, CSS, and JavaScript with focus on user experience and performance. Full-stack development with database integration.</p>
+                    <a href="#contact">Get Started</a>
+                </div>
+                <div class="service">
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>Designing intuitive user interfaces and seamless user experiences for web and mobile applications. Focus on modern design principles and user-centered approach.</p>
+                    <a href="#contact">Learn More</a>
+                </div>
+                <div class="service">
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App Development</h2>
+                    <p>Building cross-platform mobile applications using Flutter with Firebase integration. Creating apps that work seamlessly across iOS and Android platforms.</p>
+                    <a href="#contact">Discuss Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Section -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png" alt="E-commerce Django Project" loading="lazy">
+                    <div class="layer">
+                        <h3>E-commerce Platform</h3>
+                        <p>Full-stack Django application with user authentication, payment integration, and admin dashboard. Features include product catalog, shopping cart, and order management.</p>
+                        <a href="#" aria-label="View E-commerce Project"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png" alt="Flutter Task Manager App" loading="lazy">
+                    <div class="layer">
+                        <h3>Task Manager App</h3>
+                        <p>Flutter mobile app with Firebase backend for task management. Features include real-time synchronization, push notifications, and offline functionality.</p>
+                        <a href="#" aria-label="View Task Manager App"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png" alt="Portfolio Website" loading="lazy">
+                    <div class="layer">
+                        <h3>Portfolio Website</h3>
+                        <p>Responsive portfolio website built with HTML, CSS, and JavaScript. Features smooth animations, contact form integration, and mobile-first design.</p>
+                        <a href="#" aria-label="View Portfolio Website"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#contact" class="btn">Let's Work Together</a>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i> satyagagre@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +91 7020903497</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Pune, Maharashtra, India</p>
+                    
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/share/1HWqXe4J3i/" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://x.com/SatyamGagr98813?t=pEXI0oabH0_IvsceS1aahw&s=08" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/satya__gagre?igsh=MWN2MnpoaWltN2xrdg==" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/satyamgagre" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    
+                    <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+                </div>
                 
-                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-            </ul>
-
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet" id="contact-form">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn2" id="submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <i class="fa-solid fa-spinner fa-spin" id="loading-spinner" style="display: none;"></i>
+                        </button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
         
-            <i class="fa-solid fa-ellipsis-vertical" onclick="openmenu()"></i>
-        </nav>
-        <div class="header-text">
-            <p>Web Developer</p>
-            <h1>Hi, I'm <span>Satyam Gagre</span> <br> From Pune, Maharashtra</h1>
+        <hr class="copyright-line">
+        <div class="copyright">
+            <p>&copy; 2025 Satyam Gagare. All rights reserved.</p>
         </div>
     </div>
-</div>
-<!--  -------------About-------------- -->
-<div id="about">
-    <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                <img src="images/user.png" >
-            </div>
-            <div class="about-col-2">
-                <h1 class="sub-title">About Me</h1>
-                <p>I am a passionate and curious learner with a strong interest in technology and software development. I enjoy building web and Python-based projects that solve real-world problems. Always eager to learn new skills, I strive to improve every day. My goal is to become a skilled developer and make a meaningful impact through my work.</p>
-                <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                    <p class="tab-links" onclick="opentab('education')">Education</p>
-                </div>
-                <div class="tab-contents active-tabs" id="skills">
-                    <ul>
-                        <li><span>Web Development</span><br>Django-based websites and web apps</li>
-                        <li><span>App Development</span><br>Flutter apps with Firebase</li>
-                        <li><span>UI/UX</span><br>Responsive web and app designs</li>                        
-                    </ul>
-                </div>
-                <div class="tab-contents" id="experience">
-                    <ul>
-                        <li><span>2024</span><br>Web Development Intern at Tech Master – working on Django projects with authentication and database integration.</li>
-                        <li><span>2024 - Present</span><br>Developing full-stack applications using Django and building REST APIs.</li>
-                        <li><span>2024 - Present</span><br>Learning Flutter and creating mobile apps with Firebase backend.</li>                        
-                    </ul>
-                </div>
-                <div class="tab-contents" id="education">
-                    <ul>
-                        <li><span>2020</span><br>10th (SSC) from Modern High School, Shivaji Nagar, Pune</li>
-                        <li><span>2022</span><br>12th (HSC) from Modern College of Arts, Commerce and Science, Shivaji Nagar, Pune</li>
-                        <li><span>2022 - Present</span><br>Computer Engineering at Ajeenkya DY Patil University, Lohegaon, Pune</li>                        
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- ----------------services---------------- -->
-<!-- ----------------services---------------- -->
-<div class="services" id="services">
-    <div class="container">
-        <h1 class="sub-title">My Services</h1>
-        <div class="services-list">
-            <div class="service">
-                <i class="fa-solid fa-code"></i>
-                <h2>Web Design</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-                <a href="#">Learn more</a>
-            </div>
-            <div class="service">
-                <i class="fa-solid fa-crop-simple"></i>
-                <h2>UI/UX Design</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-                <a href="#">Learn more</a>
-            </div>
-            <div class="service">
-                <i class="fa-brands fa-app-store"></i>
-                <h2>App Design</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-                <a href="#">Learn more</a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- ------------------Portfolio----------------- -->
-<div id="portfolio">
-    <div class="container">
-        <h1 class="sub-title">My Work</h1>
-        <div class="work-list">
-            <div class="work">
-                <img src="images/work-1.png" >
-                <div class="layer">
-                    <h3>Social Media App</h3>
-                    <p>The app connects you to the talented people around the world.
-                        Download it from play store.</p>
-                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/work-2.png" >
-                <div class="layer">
-                    <h3>Music App</h3>
-                    <p>The app connects you to the talented people around the world.
-                        Download it from play store.</p>
-                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/work-3.png" >
-                <div class="layer">
-                    <h3>Online Shopping App</h3>
-                    <p>The app connects you to the talented people around the world.
-                        Download it from play store.</p>
-                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-                </div>
-            </div>
-        </div>
-        <a href="#" class="btn">Explore more</a>
-    </div>
-</div>
-<!-- -----------------Contact-------------------- -->
-<div id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fa-solid fa-envelope"></i> satyagagre@gmail.com</p>
-                <p><i class="fa-solid fa-phone"></i> 7020903497</p>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/share/1HWqXe4J3i/"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://x.com/SatyamGagr98813?t=pEXI0oabH0_IvsceS1aahw&s=08"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/satya__gagre?igsh=MWN2MnpoaWltN2xrdg=="><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://github.com/satyamgagre"><i class="fa-brands fa-github"></i></a>
-                </div>
-                <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
-            </div>
-            <div class="contact-right">
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="name" placeholder="Your name:" required>
-                    <input type="email" name="email" placeholder="Your Email:" required>
-                    <textarea name="message" rows="6" placeholder="Your Message:"></textarea>                    
-                    <button type="submit" class="btn btn2">Submit</button>
-                </form>
-                <span id="msg"></span>
-            </div>
-        </div>
-    </div>
-    <hr class="copyright-line">
-    <div class="copyright">
-        <p>© 2025 Satyam Gagare. All rights reserved.</p>
-    </div>
-</div>
 
-<!-- JAVA SCRIPT -->
-<script>
+    <!-- JavaScript -->
+    <script>
+        // Tab functionality
+        const tablinks = document.getElementsByClassName("tab-links");
+        const tabcontents = document.getElementsByClassName("tab-contents");
 
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-
-    function opentab(tabname){
-        for(tablink of tablinks){
-            tablink.classList.remove("active-link");
+        function opentab(tabname) {
+            for (let tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (let tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tabs");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tabs");
         }
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove("active-tabs");
+
+        // Mobile menu
+        const sidemenu = document.getElementById("sidemenu");
+        
+        function openmenu() {
+            sidemenu.style.right = "0";
         }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tabs");
-    }
-</script>
+        
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
 
-<script>
+        // Enhanced form submission
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxGI-eIPiH4-qnZJDwnaoHAFiREy87WrvKYuK0B1mbqf13i5Jo9WJMb3MuJVPxIHaqe/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        const msg = document.getElementById("msg");
+        const submitBtn = document.getElementById("submit-btn");
+        const btnText = document.querySelector(".btn-text");
+        const loadingSpinner = document.getElementById("loading-spinner");
 
-    var sidemen = document.getElementById("sidemenu");
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            
+            // Show loading state
+            btnText.style.display = 'none';
+            loadingSpinner.style.display = 'inline-block';
+            submitBtn.disabled = true;
+            
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "✅ Message sent successfully!";
+                    msg.style.color = "#61b752";
+                    form.reset();
+                })
+                .catch(error => {
+                    msg.innerHTML = "❌ Error sending message. Please try again.";
+                    msg.style.color = "#ff004f";
+                    console.error('Error!', error.message);
+                })
+                .finally(() => {
+                    // Reset button state
+                    btnText.style.display = 'inline';
+                    loadingSpinner.style.display = 'none';
+                    submitBtn.disabled = false;
+                    
+                    setTimeout(() => {
+                        msg.innerHTML = "";
+                    }, 5000);
+                });
+        });
 
-    function openmenu(){
-        sidemen.style.right = "0";
-    }
-    function closemenu(){
-        sidemen.style.right = "-200px";
-    }
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu after clicking
+                    if (window.innerWidth <= 600) {
+                        closemenu();
+                    }
+                }
+            });
+        });
 
-</script>
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxGI-eIPiH4-qnZJDwnaoHAFiREy87WrvKYuK0B1mbqf13i5Jo9WJMb3MuJVPxIHaqe/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-    form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message sent successfully."
-        })
-        setTimeout(function(){
-            msg.innerHTML = ""
-        },5000)
-        form.reset()
-        .catch(error => console.error('Error!', error.message))
-    })
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
 
-
-</script>
-
+        // Typing animation for header text
+        const typingText = document.querySelector('.typing-text');
+        const text = 'Satyam Gagre';
+        let i = 0;
+        
+        function typeWriter() {
+            if (i < text.length) {
+                typingText.innerHTML = text.slice(0, i + 1) + '<span class="cursor">|</span>';
+                i++;
+                setTimeout(typeWriter, 100);
+            } else {
+                typingText.innerHTML = text;
+            }
+        }
+        
+        // Start typing animation after page load
+        window.addEventListener('load', () => {
+            setTimeout(typeWriter, 1000);
+        });
+    </script>
 </body>
 </html>
